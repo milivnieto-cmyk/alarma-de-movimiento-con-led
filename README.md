@@ -119,5 +119,3 @@ void loop() {
 - Sensor ECHO → pin digital 10.
 - LED positivo (+) → pin digital 7, con una resistencia en serie.
 - LED negativo (−) → GND del Arduino.
-
-La protoboard permite organizar las conexiones sin soldar los componentes. Para el montaje físico, el LED debe conectarse con una resistencia de 220 Ω o 330 Ω en serie para protegerlo.
