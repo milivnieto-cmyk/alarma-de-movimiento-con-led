@@ -7,7 +7,7 @@
 - Prinzi Candelaria
 - Osler Gonzalo
 
-## 1. Historia de Usuario
+##  Historia de Usuario
 
 - **Título:** Detección de proximidad y activación de alerta visual.
 - **Como:** Usuario del sistema de seguridad.
@@ -24,7 +24,7 @@
 
 ---
 
-## 2. Requerimientos Funcionales
+##  Requerimientos Funcionales
 
 1. **Detección de proximidad:** El sistema debe detectar objetos mediante un sensor ultrasónico conectado a la placa Arduino.
 2. **Activación de alerta visual:** El sistema debe encender un LED cuando un objeto se encuentre a 35 cm o menos del sensor.
@@ -34,7 +34,7 @@
 
 ---
 
-## 3. Requisitos No Funcionales
+##  Requisitos No Funcionales
 
 1. **Tiempo de respuesta:** El LED debe encenderse rápidamente cuando el sensor detecte un objeto dentro de la distancia establecida.
 2. **Estabilidad de conexiones:** Los cables deben estar conectados correctamente para garantizar el funcionamiento del circuito y evitar lecturas incorrectas.
@@ -42,23 +42,9 @@
 4. **Mantenibilidad del código:** El programa de Arduino debe estar organizado y comentado para facilitar su comprensión y futuras modificaciones.
 5. **Confiabilidad:** Los componentes deben funcionar correctamente en condiciones normales de uso y permitir la detección de objetos a diferentes distancias.
 
----
 
-## 4. Diagrama de Flujo
 
-- **Inicio.**
-- **Configuración:** Configurar los pines del Arduino (pin 9 y pin 10 como conexiones del sensor ultrasónico; pin 7 como salida del LED).
-- **Envío de señal:** El Arduino envía un pulso al sensor ultrasónico.
-- **Medición:** El sensor recibe el eco y permite calcular la distancia hasta el objeto.
-- **Evaluación:** ¿El objeto está a 35 cm o menos?
-  - **Sí:** Encender el LED (pin 7 en estado HIGH).
-  - **No:** Apagar el LED (pin 7 en estado LOW).
-- **Espera:** Esperar 100 milisegundos.
-- **Bucle:** Volver a medir la distancia y repetir el proceso.
-
----
-
-## 5. Código Fuente (Arduino / Wokwi)
+##  Código Fuente (Arduino / Wokwi)
 
 ```cpp
 const int trigPin = 9;
