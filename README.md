@@ -105,3 +105,6 @@ void loop() {
 - Sensor ECHO → pin digital 10.
 - LED positivo (+) → pin digital 7, con una resistencia en serie.
 - LED negativo (−) → GND del Arduino.
+
+
+  Milagros Nieto
