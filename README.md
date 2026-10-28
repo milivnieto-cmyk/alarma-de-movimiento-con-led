@@ -107,4 +107,4 @@ void loop() {
 - LED negativo (−) → GND del Arduino.
 
 
-  Milagros Nieto
+  Milagros Nieto 6to A
