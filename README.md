@@ -42,66 +42,23 @@
 4. **Mantenibilidad del código:** El programa de Arduino debe estar organizado y comentado para facilitar su comprensión y futuras modificaciones.
 5. **Confiabilidad:** Los componentes deben funcionar correctamente en condiciones normales de uso y permitir la detección de objetos a diferentes distancias.
 
+**Conexiones del circuito**
 
+**Alimentación de la protoboard**
 
-##  Código Fuente (Arduino / Wokwi)
+* El pin 5V de Arduino Uno se conecta al riel positivo (+) de la protoboard.
+* El pin GND de Arduino Uno se conecta al riel negativo (−) de la protoboard.
 
-```cpp
-const int trigPin = 9;
-const int echoPin = 10;
-const int ledPin = 7;
+**Sensor ultrasónico**
 
-long duration;
-float distance;
+* VCC: riel positivo (+) de la protoboard.
+* GND: riel negativo (−) de la protoboard.
+* TRIG: pin digital 10 de Arduino.
+* ECHO: pin digital 9 de Arduino.
 
-void setup() {
-  pinMode(trigPin, OUTPUT);
-  pinMode(echoPin, INPUT);
-  pinMode(ledPin, OUTPUT);
+**LED**
 
-  Serial.begin(9600);
-}
+* Pin digital 3 de Arduino: conectado a una pata del LED mediante una resistencia.
+* Otra pata del LED: conectada al riel negativo (−) de la protoboard.
 
-void loop() {
-  // Enviar el pulso ultrasónico
-  digitalWrite(trigPin, LOW);
-  delayMicroseconds(2);
-
-  digitalWrite(trigPin, HIGH);
-  delayMicroseconds(10);
-  digitalWrite(trigPin, LOW);
-
-  // Medir el tiempo del eco
-  duration = pulseIn(echoPin, HIGH, 30000);
-
-  // Calcular la distancia en centímetros
-  if (duration == 0) {
-    distance = 999;
-  } else {
-    distance = duration * 0.0343 / 2;
-  }
-
-  // Mostrar la distancia en el monitor serie
-  Serial.print("Distancia: ");
-  Serial.print(distance);
-  Serial.println(" cm");
-
-  // Encender el LED a 35 cm o menos
-  if (distance <= 35) {
-    digitalWrite(ledPin, HIGH);
-  } else {
-    digitalWrite(ledPin, LOW);
-  }
-
-  delay(100);
-}
-```
-
-**Conexiones del circuito:**
-
-- Sensor VCC → 5V del Arduino.
-- Sensor GND → GND del Arduino.
-- Sensor TRIG → pin digital 9.
-- Sensor ECHO → pin digital 10.
-- LED positivo (+) → pin digital 7, con una resistencia en serie.
-- LED negativo (−) → GND del Arduino.
+La protoboard permite distribuir la alimentación y organizar las conexiones de los componentes del sistema de detección de proximidad.
