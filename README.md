@@ -62,3 +62,4 @@
 * Otra pata del LED: conectada al riel negativo (−) de la protoboard.
 
 La protoboard permite distribuir la alimentación y organizar las conexiones de los componentes del sistema de detección de proximidad.
+GONZALO OSLER 6to A
